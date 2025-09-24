@@ -5,6 +5,13 @@ It transforms an input sequence into an output sequence
 Why not RNN?
 RNNs process data step by step (sequentially).
 This makes them slow and hard to capture long-range dependencies
+they might forget when you have two much information.
+lstm and gru can rectify to some extent.
+problems:
+vanishing gradient problem:
+sequential computation:
+difficulty handling long dependencies
+scalability
 (important words far apart in a sentence).
 Key Advantages of Transformers
 Self-Attention
