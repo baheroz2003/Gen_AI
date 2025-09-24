@@ -1,0 +1,11 @@
+what it includes:
+transformers
+gpt models accessing
+how to access with langchain
+gen ai apps like translator
+using gemini apps
+open source llms with hugging face
+gradio deployment 
+rag
+ollama in local machine
+local rag app streamlit
