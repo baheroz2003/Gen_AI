@@ -37,3 +37,38 @@ If you don’t have billing info, it won’t work for production.
 Image Recognition:
 For images, you’d use client.images.generate() or client.chat.completions.create() with "image_url" content.
 User → API → Model → Response)
+#multi-modal input 
+response = client.chat.completions.create(
+    model="gpt-4o",   # multimodal model
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {
+            "role": "user",
+            "content": [
+                {"type": "text", "text": "What is in this image?"},
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": "https://example.com/myimage.png"
+                    },
+                },
+            ],
+        }
+    ],
+    max_tokens=300
+)
+# Text → normal answers (default).
+# Images → client.images.generate() se naya image create.
+# Audio → client.audio.speech.create() se text-to-speech.
+# Structured JSON → agar tum function calling use kar rahe ho.
+# Transformer / GPT-4o ek multimodal system hai jo text, image,
+# audio (aur future me video) sab accept karta hai 
+# aur alag-alag forms me output bhi de sakta hai.
+//for all
+print(response)
+//for specific
+print(response.choices[0].message.content)
+//in output it will describe about the image
+
+                                        
+                                        
