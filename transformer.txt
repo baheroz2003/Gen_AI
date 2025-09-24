@@ -1,0 +1,29 @@
+A Transformer is a deep learning architecture designed to handle sequential data 
+(like text, speech, time-series) but without the limitations of older models like RNNs or LSTMs.
+It transforms an input sequence into an output sequence 
+(e.g., machine translation, text generation, ChatGPT).
+Why not RNN?
+RNNs process data step by step (sequentially).
+This makes them slow and hard to capture long-range dependencies
+(important words far apart in a sentence).
+Key Advantages of Transformers
+Self-Attention
+Helps the model focus on which words in a sequence are most important.
+Example: In "The cat sat on the mat," when predicting "sat," the model attends more to "cat."
+Positional Encoding
+Since Transformers process the sequence in parallel (not step by step), they need positional information to know the order of words.
+Parallel Processing
+Unlike RNNs, Transformers process all tokens simultaneously, leading to faster training on large datasets.
+Encoder-Decoder Architecture
+Encoder: Converts input sequence into a dense vector representation (contextual meaning).
+Decoder: Uses the encoded information + previously generated tokens to produce the 
+next token in the output sequence.
+Input Prompt: "Translate 'Hello world' to French"
+Encoder: Encodes "Hello world" into vectors.
+Decoder: Generates "Bonjour le monde" token by token using encoded information.
+Transformers revolutionized NLP by replacing sequential processing (RNNs) with 
+attention + parallelization, making models like BERT, GPT, and ChatGPT possible.
+
+
+
+
